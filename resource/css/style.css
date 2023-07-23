@@ -14,15 +14,14 @@
 body{
     font-family: 'Barlow Semi Condensed', sans-serif;
     background-color: var(--clr-lg-blue);
+    font-size: 13px;
 }
 
-h1{
+h2{
     color: var(--clr-white);
-    font-weight: var(--fw-bold);
 }
 .p{
     color: var(--clr-l-gray);
-    line-height: 20px;
     font-weight: var(--fw-reg);
 }
 .daniel{  grid-area: daniel; }
@@ -33,20 +32,18 @@ h1{
 
 .grid-container {
     margin: auto;
-    margin-top: 100px;
+    margin-top: 150px;
+    margin-bottom: 150px;
     display: grid;
-    grid-template-areas:
-      'daniel daniel daniel daniel daniel daniel jonathan jonathan kira'
-      'jeanette jeanette patrick patrick patrick patrick patrick patrick kira';
     gap: 30px;
     padding: 10px;
-    width: 1500px;
+    width: 1300px;
     
   }
 
   .grid-container > div {
     text-align: left;
-    padding: 30px;
+    padding: 20px;
     font-size: 15px;
     border-radius: 5px;
     box-shadow: 6px 6px 10px 2px rgba(0,0,0,0.05);
@@ -60,4 +57,31 @@ h1{
     border-radius: 100%;
     border-style: solid;
     width: 30px;
+}
+
+@media (min-width: 1440px){
+    .grid-container{
+        grid-template-areas:
+      'daniel daniel daniel daniel daniel jonathan jonathan kira'
+      'jeanette jeanette patrick patrick patrick patrick patrick kira';
+    }
+    .quotation{
+        top: -20px; right: 70px;
+    }
+}
+@media (max-width: 1441px){
+    .grid-container{
+        grid-template-areas:
+      'daniel'
+      'jonathan'
+      'jeanette'
+      'patrick'
+      'kira';
+      width: 340px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    .quotation{
+        top: -20px; right: 10px;
+    }
 }
